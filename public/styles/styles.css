@@ -1,0 +1,28 @@
+body {
+    background-color: silver;
+}
+
+#about {
+    background-color: red;
+}
+
+.parrafo {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.fondo_cielo {
+    background-color: aqua;
+}
+
+.fondo_tierra {
+    background-color: coral;
+}
+
+div .redes{
+    background-color: blueviolet;
+}
+
+div.redes {
+    background-color: chartreuse;
+}
