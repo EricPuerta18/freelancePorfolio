@@ -6,6 +6,9 @@
 .header {
     background-color: var(--color-azul);
     padding: 30px 10px 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .header h2{
@@ -16,7 +19,6 @@
 
 .header__a--menu {
     display: inline-block;
-    margin-top: 15px;
     padding: 10px;
     background-color: var(--color-verde);
     border-radius: 5px;
@@ -24,12 +26,11 @@
 }
 
 .nav--principal {
-
+    display: none;
 }
 
 .nav--principal ul {
     list-style: none;
-    display: none;
 }
 
 /* SECTION--BANNER*/
@@ -59,8 +60,21 @@
     color: var(--color-azul);
 }
 
-.section--porfolio img {
-    width: 300px;
+
+.section--porfolio hr {
+    border: 2px solid var(--color-azul);
+}
+
+
+.box-images--porfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box-images--porfolio img {
+    width: 100%;
 }
 
 /* SECTION--ABOUT*/
@@ -71,10 +85,16 @@
     padding: 80px 10px;
 }
 
-.section--about p {
+.box-text--about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box-text--about p {
     text-align: left;
     line-height:30px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 }
 
 .section--about a {
@@ -97,6 +117,8 @@
     color: #ffffff;
     text-align: center;
     padding: 80px 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer h3 {
@@ -106,8 +128,92 @@
     font-size: 1.4rem;
 }
 
+.box-redes--footer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 0 60px;
+}
+
 .footer__article--redes a {
+    display: inline-block;
     border-radius: 50%;
     border: solid 1px #ffffff;
     padding: 8px;
+    width: 40px;
+}
+
+@media (min-width: 768px) {
+
+    .header {
+        padding: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box-images--porfolio {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+    .box-images--porfolio img {
+        width: 48.5%;
+    }
+
+    .box-text--about {
+        padding: 0 30px;
+    }
+
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer article {
+        width: 33%;
+    }
+
+    .box-redes--footer {
+        padding: 0 40px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .header {
+        padding: 30px 60px;
+    }
+
+    .nav--principal {
+        display: block;
+        text-transform: uppercase;
+    }
+
+    .nav--principal ul {
+        display: flex;
+        gap: 20px;
+        font-weight: 800;
+    }
+
+    .header__a--menu {
+        display: none;
+    }
+    
+
+    .box-images--porfolio {
+        padding: 0 50px;
+    }
+    .box-images--porfolio img {
+        width: 32%;
+    }
+
+    .box-text--about {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        width: 55vw;
+        margin: 0 auto;
+    }
 }
