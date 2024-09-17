@@ -8,6 +8,7 @@
     background-color: var(--color-azul);
     padding: 30px 10px 20px;
     display: flex;
+    align-items: center;
     gap: 15px;
     flex-wrap: wrap;
 }
